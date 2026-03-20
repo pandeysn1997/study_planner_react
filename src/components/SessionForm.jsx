@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { StudyContext } from "../context/StudyContext";
-import { TextField, Button, Box } from "@mui/material";
+import { TextField, Button, Box ,Typography} from "@mui/material";
  
 export default function SessionForm() {
   const { addSession } = useContext(StudyContext);
@@ -37,6 +37,9 @@ export default function SessionForm() {
         onChange={(e) => setSession({...session, hours: e.target.value})}
       />
       <Button variant="contained" type="submit">Add Session</Button>
+            <Typography variant="caption" sx={{ display: "block", textAlign: "right", mt: 2, color: "text.secondary" }}>
+              © Made by Sachin Pandey
+            </Typography>
     </Box>
   );
 }
